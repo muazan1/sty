@@ -1,0 +1,15 @@
+{
+  "name": "sty/hutton",
+  "description": "this is testing package crud",
+  "autoload": {
+    "psr-4": {
+      "Sty\\Hutton\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "y"
+    }
+  ],
+  "require": {}
+}
