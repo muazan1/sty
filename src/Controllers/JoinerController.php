@@ -9,13 +9,17 @@ use Sty\Hutton\Inspire;
 use Sty\Hutton\Models\Joiner;
 class JoinerController extends Controller
 {
-    public function CreateJoiner(Request $request, $name, $email, $phone)
+    public function CreateJoiner(Request $request)
     {
         $joiner = Joiner::create([
-            'name' => $name,
-            'email' => $email,
-            'phone' => $phone,
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
         ]);
-        return $joiner;
+        return 'Joiner Created';
     }
+
+    // public function createBuilder  () {
+
+    // }
 }

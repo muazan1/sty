@@ -13,10 +13,9 @@ use Sty\Hutton\Controllers\JoinerController;
 //     'greeting',
 // ]);
 
-Route::get('inspire', [InspirationController::class, 'google']);
+Route::get('create-joiner', [InspirationController::class, 'google']);
 
-Route::get('create-joiner/{name}/{email}/{phone}', [
-    JoinerController::class,
-    'CreateJoiner',
-]);
+Route::post('store-joiner', [JoinerController::class, 'CreateJoiner'])->name(
+    'create.joiner'
+);
 // Route::get('inspire', [InspirationController::class, 'yahooo']);

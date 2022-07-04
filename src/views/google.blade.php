@@ -9,7 +9,19 @@
 </head>
 
 <body>
-    {{ 'google.com' }}
+    <div>
+
+        <form action="{{ route('create.joiner') }}" method="POST">
+            @csrf
+            <input type="text" name="name">
+            <br>
+            <input type="email" name="email">
+            <br>
+            <input type="text" name="phone">
+            <br>
+            <button>Create Joiner</button>
+        </form>
+    </div>
 </body>
 
 </html>
